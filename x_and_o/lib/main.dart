@@ -118,7 +118,7 @@ class _GameState extends State<Game> {
   Color bac0=Colors.grey[100];
   bool them=true;
   Widget but(int e,int f){
-    return OutlineButton(highlightedBorderColor:bac0,borderSide: BorderSide(width:2,color: bac0),padding:EdgeInsets.all(20),onPressed: ()=>change(e,f), child: Text('${grid[e][f]}',style:TextStyle(color: Colors.red,fontSize:30)));
+    return OutlineButton(highlightedBorderColor:bac0,borderSide: BorderSide(width:2,color: bac0),padding:EdgeInsets.all(20),onPressed: ()=>change(e,f), child: Text('${grid[e][f]}',style:TextStyle(color: Colors.blue,fontSize:30)));
   }
   @override
   Widget build(BuildContext context) {
