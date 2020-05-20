@@ -104,21 +104,13 @@ class _GameState extends State<Game> {
       });
     }
   }
-  Color ofx=Colors.red;
-  Color ofo=Colors.blue;
-  Color getcol(String ok){
-    if (ok=='X'){
-      return ofx;
-    }
-    else{
-      return ofo;
-    }
-  }
   Color bac=Colors.grey[800];
   Color bac0=Colors.grey[100];
   bool them=true;
   Widget but(int e,int f){
-    return OutlineButton(highlightedBorderColor:bac0,borderSide: BorderSide(width:2,color: bac0),padding:EdgeInsets.all(20),onPressed: ()=>change(e,f), child: Text('${grid[e][f]}',style:TextStyle(color: Colors.blue,fontSize:30)));
+    return OutlineButton(highlightedBorderColor:bac0,borderSide: BorderSide(
+      width:2,color: bac0),padding:EdgeInsets.all(20),onPressed: ()=>change(e,f), child: Text('${grid[e][f]}',
+      style:TextStyle(color:bac0,fontSize:30)));
   }
   @override
   Widget build(BuildContext context) {
@@ -146,7 +138,7 @@ class _GameState extends State<Game> {
           
           ]
         ),)),
-        appBar: AppBar(backgroundColor:Colors.transparent,elevation:0),
+        appBar: AppBar(iconTheme: IconThemeData(color:bac0),backgroundColor:Colors.transparent,elevation:0),
         body:Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
